@@ -82,7 +82,7 @@ export function RecentPosts() {
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h2 className="mb-4 text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600">Pesan Terbaru 💌</h2>
+          <h2 className="mb-4 text-transparent bg-clip-text bg-blue-500 drop-shadow-md">Pesan Terbaru 💌</h2>
           <p className="text-xl">Ayo lihat apa yang temanmu bagikan!</p>
         </div>
         

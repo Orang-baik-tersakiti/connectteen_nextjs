@@ -40,10 +40,9 @@ export function Articles() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex items-center justify-between mb-12">
           <div>
-            <h2 className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-pink-600">Artikel Terbaru 📚</h2>
-            <p className="text-lg mt-2">Belajar dan berkembang bersama!</p>
+            <h2 className="text-transparent bg-clip-text bg-blue-500 drop-shadow-md">Artikel Terbaru 📚</h2>
           </div>
-          <Button variant="ghost" className="gap-2 hover:bg-purple-100">
+          <Button  className="gap-2 active:bg-purple-100 lg:hover:bg-purple-100 bg-white cursor-pointer text-black">
             Lihat Semua Artikel
             <ArrowRight className="w-4 h-4" />
           </Button>
@@ -85,7 +84,7 @@ export function Articles() {
       </div>
 
       {/* Cute decorative elements */}
-      <div className="absolute top-20 right-20 text-5xl animate-bounce">📖</div>
+      <div className="absolute top-20 right-20 text-5xl animate-bounce hidden lg:block">📖</div>
       <div className="absolute bottom-32 left-32 text-4xl">💡</div>
     </section>
   );

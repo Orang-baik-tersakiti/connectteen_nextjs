@@ -1,19 +1,15 @@
-import { MessageCircle, Mail, Facebook, Twitter, Instagram, Heart } from "lucide-react";
+import { Mail, Facebook, Twitter, Instagram, Heart } from "lucide-react";
 import { Button } from "./ui/button";
 
 export function Footer() {
   return (
-    <footer className="bg-linear-to-br from-blue-600  to-sky-600 text-white py-12 px-6 relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-yellow-400 rounded-full opacity-20 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-blue-400 rounded-full opacity-20 blur-3xl"></div>
-
+    <footer className="bg-linear-to-br from-blue-500  to-sky-500 text-white py-12 px-6 relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="bg-white/20 backdrop-blur-lg rounded-full p-2 border-2 border-white/40">
-                <MessageCircle className="w-6 h-6" />
+              <div className="bg-white/20 backdrop-blur-lg rounded-full border-2 border-white/40">
+                <img src="img/connectteen_icon.jpg" className="w-9 h-9 rounded-full" />
               </div>
               <span className="text-xl">ConnectTeen</span>
             </div>
@@ -23,7 +19,7 @@ export function Footer() {
           </div>
 
           <div>
-            <div>
+            <div className="mb-8">
               <h3 className="mb-4">Tautan Cepat</h3>
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="text-white/80 hover:text-white transition-colors hover:underline">Tentang Kami</a></li>
@@ -66,9 +62,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/20 pt-8 text-center text-sm text-white/80">
-          <p className="flex items-center justify-center gap-2">
-            Made with <Heart className="w-4 h-4 text-red-300 fill-red-300" /> for our teen community © 2025 ConnectTeen
+        <div className="border-t border-white/20 pt-4 text-center text-sm text-white/80">
+          <p className="flex items-center justify-center gap-1 mb-1">
+            Made with <Heart className="w-4 h-4 text-red-300 fill-red-300" />
+          </p>
+          <p>
+            for our teen community © 2025 ConnectTeen
           </p>
         </div>
       </div>

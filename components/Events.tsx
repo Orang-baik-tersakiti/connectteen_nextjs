@@ -56,25 +56,24 @@ const events = [
 export function Events() {
   return (
     <section className="py-16 px-6 bg-linear-to-b from-white via-yellow-50 to-orange-50 relative overflow-hidden">
-
-     
-      
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h2 className="mb-4 text-transparent bg-clip-text bg-linear-to-r from-orange-600 to-red-600">Events yang akan datang! 🎉</h2>
-          <p className="text-xl">Jangan lewatkan keseruannya!</p>
+          <h2 className="text-transparent bg-clip-text bg-blue-500 drop-shadow-md">Events yang akan datang! 🎉</h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {events.map((event) => (
-            <Card key={event.id} className="hover:shadow-2xl transition-all hover:-translate-y-2 border-4 border-white shadow-lg overflow-hidden">
-              <div className={`h-2 bg-linear-to-r bg-blue-400`}></div>
-              <CardHeader className={`bg-linear-to-br bg-cyan-50`}>
-                <div className="flex items-center gap-3">
-                  <CardTitle className="flex-1">{event.title}</CardTitle>
+            <Card
+              key={event.id}
+              className="flex flex-col hover:shadow-2xl transition-all hover:-translate-y-2 border-4 border-white shadow-lg overflow-hidden"
+            >
+              <div className="h-2 bg-linear-to-r bg-blue-400"></div>
+              <CardHeader className="bg-linear-to-br bg-cyan-50">
+                <div className="flex flex-col items-start gap-3">
+                  <CardTitle className="text-left">{event.title}</CardTitle>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-3 pt-4">
+              <CardContent className="space-y-3 text-left flex flex-col h-full">
                 <p className="text-muted-foreground">{event.description}</p>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-sm bg-blue-50 p-2 rounded-lg">
@@ -87,10 +86,10 @@ export function Events() {
                   </div>
                   <div className="flex items-center gap-2 text-sm bg-pink-50 p-2 rounded-lg">
                     <Users className={`w-4 h-4 bg-linear-to-r ${event.color} bg-clip-text text-transparent`} />
-                    <span>{event.attendees} Kehadiran </span>
+                    <span>{event.attendees} Kehadiran</span>
                   </div>
                 </div>
-                <Button className={`w-full mt-4 bg-linear-to-r from-blue-400 to-cyan-400 text-white border-0 shadow-lg hover:shadow-xl transition-all`}>
+                <Button className="w-full mt-auto bg-linear-to-r from-blue-400 to-cyan-400 text-white border-0 shadow-lg hover:shadow-xl transition-all">
                   Daftar Sekarang
                 </Button>
               </CardContent>
@@ -98,9 +97,9 @@ export function Events() {
           ))}
         </div>
       </div>
-      
+
       {/* Cute decorative elements */}
-      <div className="absolute top-20 right-10 text-6xl animate-pulse">🎊</div>
+      <div className="absolute top-20 right-10 text-6xl animate-pulse hidden lg:block">🎊</div>
       <div className="absolute bottom-20 left-10 text-5xl">🎈</div>
     </section>
   );
