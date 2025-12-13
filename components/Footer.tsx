@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="bg-linear-to-br from-cyan-600 to-blue-600 text-white py-12 px-6 relative overflow-hidden animate-fade-in">
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          <div>
+          <div className="animate-fade-in">
             <div className="flex items-center gap-2 mb-4">
               <div className="bg-white/20 backdrop-blur-lg rounded-full border-2 border-white/40">
                 <img src="img/connectteen_icon.jpg" className="w-9 h-9 rounded-full" />
@@ -18,7 +18,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div>
+          <div className="animate-fade-in">
             <div className="mb-8">
               <h3 className="mb-4">Quick Links</h3>
               <ul className="space-y-2 text-sm">
@@ -40,7 +40,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="animate-fade-in">
               <h3 className="mb-4">Stay Connected 🌟</h3>
               <p className="text-white/80 text-sm mb-4">
                 Ikuti kami di media sosial untuk mendapatkan pembaruan dan sorotan komunitas
@@ -62,7 +62,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/20 pt-4 text-center text-sm text-white/80">
+        <div className="border-t border-white/20 pt-4 text-center text-sm text-white/80 animate-fade-in">
           <p className="flex items-center justify-center gap-1 mb-1">
             Made with <Heart className="w-4 h-4 text-red-300 fill-red-300" />
           </p>

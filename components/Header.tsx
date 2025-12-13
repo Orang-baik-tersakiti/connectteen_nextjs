@@ -39,11 +39,11 @@ export function Header({ onNavigate, currentPage }: { onNavigate?: (page: string
           <div className="flex items-center gap-2">
             <div className=" rounded-full shadow-lg">
               <a onClick={() => handleNavClick("home")} className="cursor-pointer">
-                <img src="/img/connectteen_icon.jpg" className="w-8 h-8 rounded-full text-white" />
+                <img src="/img/connectteen_icon.jpg" className="w-7 h-7 rounded-full text-white" />
               </a>
             </div>
             <a onClick={() => handleNavClick("home")} className="cursor-pointer">
-              <span className="text-xl text-transparent bg-clip-text bg-gray-800">ConnectTeen</span>
+              <span className="text-lg text-transparent bg-clip-text bg-gray-800">ConnectTeen</span>
             </a>
           </div>
 
@@ -74,7 +74,7 @@ export function Header({ onNavigate, currentPage }: { onNavigate?: (page: string
             </a>
           </nav>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden text-lg md:flex items-center gap-3">
             <Button  onClick={() => handleNavClick("signin")} variant="ghost" className="hover:bg-blue-100 text-lg cursor-pointer">Sign In</Button>
           </div>
 

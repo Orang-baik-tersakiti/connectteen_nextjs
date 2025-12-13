@@ -1,5 +1,4 @@
 'use client'
-import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { Users, Sparkles } from "lucide-react";
 
@@ -8,17 +7,11 @@ interface HeroProps {
 }
 
 export function Hero({ onNavigate }: HeroProps) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden bg-[url('/img/hero.jpg')] bg-cover bg-center">
       <div className={`relative z-10 text-center text-white px-6 py-16 max-w-5xl mx-auto
-      transition-all duration-500 ease-out
-      ${mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6"
-        }`}>
+      transition-all duration-500 ease-out`}>
 
         <div className="flex justify-center mb-6">
           <div className="bg-white/20 backdrop-blur-lg rounded-full border-4 border-white/40 shadow-2xl">

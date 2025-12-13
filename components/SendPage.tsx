@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -11,11 +11,6 @@ export function SendPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSong, setSelectedSong] = useState<any>(null);
   const [showSongSearch, setShowSongSearch] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const mockSongs = [
     { id: 1, title: "Blinding Lights", artist: "The Weeknd", album: "After Hours" },
@@ -44,8 +39,7 @@ export function SendPage() {
 
   return (
     <div className={`min-h-screen bg-gradient-to-br from-cyan-600 to-blue-600
-    transition-all duration-500 ease-out
-    ${mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6"}`}>
+    transition-all duration-500 ease-out`}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
