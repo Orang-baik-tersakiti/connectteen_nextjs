@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Zen_Maru_Gothic } from "next/font/google";
+
+const zenMaru = Zen_Maru_Gothic({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700", "900"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "ConnectTeen Community",
@@ -13,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body>
+      <body className={zenMaru.className}>
         {children}
       </body>
     </html>

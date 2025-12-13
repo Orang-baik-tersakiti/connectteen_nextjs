@@ -10,7 +10,7 @@ export function Hero({ onNavigate }: HeroProps) {
 
   return (
     <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden bg-[url('/img/hero.jpg')] bg-cover bg-center">
-      <div className={`relative z-10 text-center text-white px-6 py-16 max-w-5xl mx-auto
+      <div className={`relative z-10 text-center animate-fade-in text-white px-6 py-16 max-w-5xl mx-auto
       transition-all duration-500 ease-out`}>
 
         <div className="flex justify-center mb-6">

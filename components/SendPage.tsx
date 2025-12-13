@@ -42,22 +42,22 @@ export function SendPage() {
     transition-all duration-500 ease-out`}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
-        <div className="mb-12">
+        <div className="mb-12 animate-fade-in">
           <h1 className="text-4xl text-white mb-3">
-            Send a Message
+            Kirimkan Pesan Spesialmu!
           </h1>
           <p className="text-lg text-white">
-            Share your thoughts and favorite music with friends
+            Bagikan pesan hangat dan lagu favoritmu kepada teman spesialmu
           </p>
         </div>
 
         {/* Main form card */}
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8 mb-8">
+        <div className="bg-white rounded-xl animate-fade-in shadow-lg border border-gray-200 p-8 mb-8">
           <div className="space-y-6">
             {/* Recipient field */}
             <div>
               <label className="block text-sm text-gray-700 mb-2">
-                To
+                Untuk siapa pesannya?
               </label>
               <div className="relative">
                 <Input
@@ -74,7 +74,7 @@ export function SendPage() {
             {/* Message field */}
             <div>
               <label className="block text-sm text-gray-700 mb-2">
-                Your Message
+                Pesanmu untuknya?
               </label>
               <Textarea
                 placeholder="Write your message here..."
@@ -88,7 +88,7 @@ export function SendPage() {
             {/* Spotify section */}
             <div>
               <label className="block text-sm text-gray-700 mb-2">
-                Add a Song (Optional)
+                Tambahkan Lagu dari Spotify (Opsional)
               </label>
               
               {!showSongSearch && !selectedSong && (
@@ -179,7 +179,7 @@ export function SendPage() {
         </div>
 
         {/* Info card */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <div className="bg-blue-50 animate-fade-in border border-blue-200 rounded-lg p-6">
           <p className="text-sm text-gray-700">
             <strong>Tips:</strong> Menambahkan lagu akan membuat pesanmu terasa lebih personal dan berkesan. Temanmu bisa mendengarkan lagu tersebut bersamaan dengan pesan yang kamu kirimkan.
           </p>
