@@ -32,8 +32,11 @@ const articles = [
     color: "from-orange-400 to-yellow-400"
   }
 ];
+interface HeroProps {
+  onNavigate: (page: string) => void;
+}
 
-export function Articles() {
+export function Articles({ onNavigate }: HeroProps){
   return (
     <section className="py-16 px-6 bg-linear-to-b from-purple-50 via-pink-50 to-white relative overflow-hidden animate-fade-in">
 
@@ -42,7 +45,7 @@ export function Articles() {
           <div>
             <h2 className="text-transparent bg-clip-text bg-blue-500 drop-shadow-md">Artikel Terbaru 📚</h2>
           </div>
-          <Button  className="gap-2 active:bg-purple-100 lg:hover:bg-purple-100 bg-white cursor-pointer text-black">
+          <Button variant="link" onClick={() => onNavigate("all_article")} className="gap-2 active:bg-purple-100 bg-transparent cursor-pointer text-blue-600">
             Lihat Semua Artikel
             <ArrowRight className="w-4 h-4" />
           </Button>
@@ -67,7 +70,7 @@ export function Articles() {
                 <p className="text-muted-foreground mb-4">{article.excerpt}</p>
                 <div className="flex justify-between items-center">
                   <Button variant="link" className={`p-0 gap-2 text-transparent bg-clip-text bg-linear-to-r bg-blue-400`}>
-                    Read More
+                    Baca Selengkapnya
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                   <span className="text-sm text-muted-foreground flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full">
@@ -83,7 +86,7 @@ export function Articles() {
 
       {/* Cute decorative elements */}
       <div className="absolute top-20 right-20 text-5xl animate-bounce hidden lg:block">📖</div>
-      <div className="absolute bottom-32 left-32 text-4xl">💡</div>
+      <div className="absolute bottom-32 left-15 text-4xl">💡</div>
     </section>
   );
 }

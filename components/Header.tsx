@@ -34,7 +34,7 @@ export function Header({ onNavigate, currentPage }: { onNavigate?: (page: string
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b-4 border-blue-200 shadow-md">
-      <div className="max-w-6xl mx-auto px-6 py-4">
+      <div className="max-w-6xl mx-auto px-6 py-3 md:py-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className=" rounded-full shadow-lg">
@@ -47,7 +47,7 @@ export function Header({ onNavigate, currentPage }: { onNavigate?: (page: string
             </a>
           </div>
 
-          <nav className="hidden text-lg md:flex items-center gap-6">
+          <nav className="hidden text-md md:flex items-center gap-6">
             <a
               onClick={() => handleNavClick("home")}
               className={`transition-colors cursor-pointer font-medium ${currentPage === "home" ? "text-blue-400" : "text-gray-600 hover:text-blue-400"}`}
@@ -74,8 +74,8 @@ export function Header({ onNavigate, currentPage }: { onNavigate?: (page: string
             </a>
           </nav>
 
-          <div className="hidden text-lg md:flex items-center gap-3">
-            <Button  onClick={() => handleNavClick("signin")} variant="ghost" className="hover:bg-blue-100 text-lg cursor-pointer">Sign In</Button>
+          <div className="hidden text-md md:flex items-center gap-3">
+            <Button  onClick={() => handleNavClick("signin")} variant="ghost" className="hover:bg-blue-100 text-md cursor-pointer">Sign In</Button>
           </div>
 
           <Button

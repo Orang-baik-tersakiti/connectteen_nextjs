@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { RecentPosts } from "@/components/RecentPosts";
@@ -10,9 +10,19 @@ import { SendPage } from "@/components/SendPage";
 import Auth from "@/components/Auth";
 import { ExplorePage } from "@/components/ExplorePage";
 import { HistoryPage } from "@/components/HistoryPage";
+import { ArticlesPage } from "@/components/ArticlesPage";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
+
+
+useEffect(() => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}, [currentPage]);
+
 
   return (
     <div className="min-h-screen">
@@ -22,7 +32,7 @@ export default function App() {
         <>
           <Hero onNavigate={setCurrentPage} />
           <RecentPosts />
-          <Articles />
+          <Articles onNavigate={setCurrentPage} />
           <Events />
         </>
       )}
@@ -30,6 +40,10 @@ export default function App() {
       {currentPage === "signin" && <Auth />}
       {currentPage === "explore" && <ExplorePage />}
       {currentPage === "history" && <HistoryPage />}
+      {currentPage === "all_article" && (
+        <ArticlesPage onBack={() => setCurrentPage("home")} />
+      )}
+
       <Footer />
     </div>
   );

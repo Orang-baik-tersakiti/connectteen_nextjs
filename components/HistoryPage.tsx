@@ -114,7 +114,7 @@ export function HistoryPage() {
                                 Lihat History Kamu
                             </h1>
                             <p className="text-lg text-gray-600">
-                                Masuk untuk melihat semua pesan yang kamu kirim dan terima
+                                Masuk untuk melihat semua pesan yang kamu kirim
                             </p>
                         </div>
 
@@ -176,14 +176,6 @@ export function HistoryPage() {
             {/* Header */}
             <div className="bg-gradient-to-br from-cyan-600 to-blue-600 text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    <Button
-                        onClick={handleSignOut}
-                        variant="outline"
-                        className="absolute top-22 md:top-26 right-6 bg-transparent border-white text-white hover:bg-white font-bold animate-fade-in"
-                    >
-                        <LogOut className="w-4 h-4 mr-2" />
-                        Sign Out
-                    </Button>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in">
                         <div>
                             <h1 className="text-5xl mb-4">
@@ -204,6 +196,19 @@ export function HistoryPage() {
                             </div>
                         </div>
                         <div className="relative h-80 rounded-xl overflow-hidden shadow-2xl">
+                            {/* Overlay */}
+                            <div className="absolute top-4 right-4 z-10">
+                                <Button
+                                    onClick={handleSignOut}
+                                    variant="outline"
+                                    className="bg-white/80 backdrop-blur border-white text-gray-800 hover:bg-white font-bold"
+                                >
+                                    <LogOut className="w-4 h-4 mr-2" />
+                                    Sign Out
+                                </Button>
+                            </div>
+
+                            {/* Image */}
                             <img
                                 src="/img/hero-history.jpg"
                                 alt="History Message"
