@@ -1,11 +1,11 @@
-import InputGroup from "@/components/FormElements/InputGroup";
-import { TextAreaGroup } from "@/components/FormElements/InputGroup/text-area";
-import { Select } from "@/components/FormElements/select";
-import { ShowcaseSection } from "@/components/Layouts/showcase-section";
+import InputGroup from "@/app/admin/components/FormElements/InputGroup";
+import { TextAreaGroup } from "@/app/admin/components/FormElements/InputGroup/text-area";
+import { Select } from "@/app/admin/components/FormElements/select";
+import { ShowcaseSection } from "@/app/admin/components/Layouts/showcase-section";
 
 export function ContactForm() {
   return (
-    <ShowcaseSection title="Contact Form" className="!p-6.5">
+    <ShowcaseSection title="Contact Form" className="p-6.5!">
       <form action="#">
         <div className="mb-4.5 flex flex-col gap-4.5 xl:flex-row">
           <InputGroup

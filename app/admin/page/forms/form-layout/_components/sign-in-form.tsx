@@ -1,6 +1,6 @@
-import { Checkbox } from "@/components/FormElements/checkbox";
-import InputGroup from "@/components/FormElements/InputGroup";
-import { ShowcaseSection } from "@/components/Layouts/showcase-section";
+import { Checkbox } from "@/app/admin/components/FormElements/checkbox";
+import InputGroup from "@/app/admin/components/FormElements/InputGroup";
+import { ShowcaseSection } from "@/app/admin/components/Layouts/showcase-section";
 import Link from "next/link";
 
 export function SignInForm() {
