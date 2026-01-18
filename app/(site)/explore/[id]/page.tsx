@@ -20,12 +20,12 @@ export default function MessageDetailPage() {
   }, [id, fetchMessageById]);
 
   if (!selectedMessage) {
-    return <p className="text-center mt-10">Loading message...</p>;
+    return null
   }
 
   const avatarLetter =
     selectedMessage.recipient_name?.charAt(0).toUpperCase() || "?";
-    
+
 
   return (
     <div className="min-h-screen bg-linear-to-br from-cyan-100 via-blue-100 to-white px-4 py-12">

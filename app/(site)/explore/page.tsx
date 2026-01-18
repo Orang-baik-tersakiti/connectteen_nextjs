@@ -26,9 +26,6 @@ export default function ExplorePage() {
     }
   };
 
-  if (loading) {
-    return <div className="py-12 text-center text-gray-500">Loading messages...</div>;
-  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -45,7 +42,7 @@ export default function ExplorePage() {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
               <Input
                 placeholder="Cari pesan, lagu, atau nama..."
-                className="h-14 pl-12"
+                className="h-14 pl-12 text-black"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyDown={handleSearch}

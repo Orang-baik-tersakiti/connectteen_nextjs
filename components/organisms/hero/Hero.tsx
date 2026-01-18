@@ -55,10 +55,9 @@ export function Hero() {
                 alt={slide.title}
                 fill
                 priority={i === 0}
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw, 1920px"
                 className="object-cover"
-                quality={100}
-                unoptimized
+                quality={80}
               />
 
               <div className="relative bg-black/20 inset-0 z-10 flex items-center md:items-start md:pt-36 justify-center min-w-full min-h-[607px]">

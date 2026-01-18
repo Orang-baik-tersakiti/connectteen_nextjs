@@ -56,25 +56,12 @@ export default function HistoryPage() {
     )
   }
 
-  if (!isAuthenticated) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-        <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
-          <h1 className="text-3xl mb-3">History Pesan</h1>
-          <p className="text-gray-600 mb-6">
-            Masuk untuk melihat semua pesan yang pernah kamu kirim
-          </p>
+  useEffect(() => {
+    if (!isAuthenticated) {
+      router.replace('/signin')
+    }
+  }, [isAuthenticated, router])
 
-          <Button
-            onClick={handleLogin}
-            className="w-full h-14 bg-white text-gray-700 border shadow hover:bg-gray-50"
-          >
-            Masuk dengan Google
-          </Button>
-        </div>
-      </div>
-    )
-  }
 
   if (loadingData) {
     return (
@@ -109,16 +96,6 @@ export default function HistoryPage() {
           </div>
 
           <div className="relative h-80 rounded-xl overflow-hidden shadow-2xl">
-            <div className="absolute top-4 right-4 z-10">
-              <Button
-                onClick={logout}
-                variant="outline"
-                className="bg-white/80 text-gray-800"
-              >
-                <LogOut className="w-4 h-4 mr-2" />
-                Logout
-              </Button>
-            </div>
 
             <Image
               src="/img/hero-history.jpg"
